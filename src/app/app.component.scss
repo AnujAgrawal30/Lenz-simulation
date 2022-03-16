@@ -84,6 +84,9 @@
                 height: 7vw;
                 top: 15vw;
                 right: 10vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             .wire {
                 position: absolute;
@@ -101,6 +104,22 @@
             .right {
                 top: 18.5vw;
                 right: 0vw;
+            }
+            .arrow {
+                position: absolute;
+                background-image: url("../assets/arrow.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 5vw;
+                height: 5vw;
+            }
+            .a-left {
+                top: 1.35vw;
+                left: 30vw;
+            }
+            .a-right {
+                top: 16.3vw;
+                right: 30vw;
             }
         }
         .coil {
