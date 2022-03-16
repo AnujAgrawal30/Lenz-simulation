@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 .container {
     display: flex;
     align-items: center;
@@ -9,18 +10,24 @@
         .div-heading{
             padding-top: 3vw;
             padding-bottom: 3vw;
+            font-family: Chivo;
 
             .heading {
-                font-size: 8vw;
+                font-size: 7vw;
                 font-weight: 900;
+                text-align: left;
             }
             .sub-heading {
                 text-align: end;
-                margin-top: -1.5vw;
+                font-style: italic;
+                margin-top: -1vw;
+                margin-right: 3vw;
             }
         }
         .description {
             margin-bottom: 3vw;
+            font-family: Chivo;
+            font-size: 1vw;
         }
         .short {
             width: 70%;
@@ -33,15 +40,18 @@
 
                 .desc {
                     font-size: 1.5vw;
+                    font-family: Chivo;
                     width: 10vw;
                 }
                 .num-coils {
-                    font-size: 2vw;
+                    font-family: Chivo;
+                    font-size: 3vw;
                     font-weight: 900;
                     margin: 2vw;
                 }
             }
             .div-slider {
+                font-family: Chivo;
                 display: flex;
 
             }
@@ -107,11 +117,12 @@
             }
             .arrow {
                 position: absolute;
+                margin-top: 1vw;
                 background-image: url("../assets/arrow.svg");
                 background-size: contain;
                 background-repeat: no-repeat;
-                width: 5vw;
-                height: 5vw;
+                width: 3vw;
+                height: 3vw;
             }
             .a-left {
                 top: 1.35vw;
