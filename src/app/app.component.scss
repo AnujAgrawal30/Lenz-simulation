@@ -1,0 +1,113 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .div-content{
+        width: 40vw;
+
+        .div-heading{
+            padding-top: 3vw;
+            padding-bottom: 3vw;
+
+            .heading {
+                font-size: 8vw;
+                font-weight: 900;
+            }
+            .sub-heading {
+                text-align: end;
+                margin-top: -1.5vw;
+            }
+        }
+        .description {
+            margin-bottom: 3vw;
+        }
+        .short {
+            width: 70%;
+        }
+        .div-controller {
+
+            .head {
+                display: flex;
+                align-items: center;
+
+                .desc {
+                    font-size: 1.5vw;
+                    width: 10vw;
+                }
+                .num-coils {
+                    font-size: 2vw;
+                    font-weight: 900;
+                    margin: 2vw;
+                }
+            }
+            .div-slider {
+                display: flex;
+
+            }
+        }
+    }
+    .div-experiment {
+        margin-top: 2vw;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+
+        .div-background {
+            position: relative;
+            width: 100%;
+
+            .magnet {
+                position: absolute;
+                background-image: url("../assets/Magnet.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 18vw;
+                height: 5vw;
+                top: 9vw;
+                left: 10vw;
+            }
+            .bulb {
+                position: absolute;
+                background-image: url("../assets/Bulb.svg");
+                background-size: contain;
+                width: 7vw;
+                height: 7vw;
+                left: 10vw;
+            }
+            .ammeter {
+                position: absolute;
+                background-image: url("../assets/Ammeter.svg");
+                background-size: contain;
+                width: 7vw;
+                height: 7vw;
+                top: 15vw;
+                right: 10vw;
+            }
+            .wire {
+                position: absolute;
+                background-image: url("../assets/Wire.svg");
+                background-size: contain;
+                background-repeat: repeat-x;
+                background-size: cover;
+                width: 50vw;
+                height: 0.7vw;
+            }
+            .left {
+                top: 3.5vw;
+                left: 0vw;
+            }
+            .right {
+                top: 18.5vw;
+                right: 0vw;
+            }
+        }
+        .coil {
+            position: relative;
+            background-image: url("../assets/Coil.svg");
+            height: 16.5vw;
+            top: 3vw;
+        }
+    }
+}
