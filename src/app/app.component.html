@@ -26,7 +26,7 @@
         <div class="desc">
           Number of turns in coil:
         </div>
-        <div class="num-coils">{{num_coils}}</div>
+        <div id="num_coils" class="num-coils">{{num_coils}}</div>
       </div>
       <div class="div-slider">
         <div class="slider-num left">
@@ -43,8 +43,9 @@
   </div>
   <div class="div-experiment" style="margin-bottom: 10%;">
     <div class="div-background">
-      <div class="magnet" id="dragger">
+      <div class="div-magnet" id="dragger">
       <ng-lottie class="lottieFile" height="auto" [options]="options"></ng-lottie>
+      <div class="magnet"></div>
       </div>
       <div class="wire left"></div>
       <div class="wire right"></div>

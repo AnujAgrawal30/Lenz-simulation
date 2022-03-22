@@ -21,12 +21,13 @@ export class AppComponent implements AfterViewInit {
     var arrow1 = document.getElementById('arrow1');
     var arrow2 = document.getElementById('arrow2');
     var current = document.getElementById('current');
-    if ((elem) && (arrow1) && (arrow2) && (current)){
-      this.dragElement(elem, arrow1, arrow2, current);
+    var num_coils_elem = document.getElementById('num_coils');
+    if ((elem) && (arrow1) && (arrow2) && (current) && (num_coils_elem)){
+      this.dragElement(elem, arrow1, arrow2, current, num_coils_elem);
     }
   }
 
-  dragElement(elmnt: HTMLElement, arrow1: HTMLElement, arrow2: HTMLElement, current_elem: HTMLElement) {
+  dragElement(elmnt: HTMLElement, arrow1: HTMLElement, arrow2: HTMLElement, current_elem: HTMLElement, num_coils_elem: HTMLElement) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     var time = Date.now();
     var noise = 10, scale = 1000;
@@ -85,7 +86,12 @@ export class AppComponent implements AfterViewInit {
         arrow1.style.setProperty('transform', 'rotate(180deg)');
         arrow2.style.setProperty('transform', 'rotate(180deg)');
       }
-      current_elem.textContent = "Current: " + Math.abs(current).toFixed(0) + "uA";
+      if (num_coils_elem.textContent){
+        var num: number = +num_coils_elem.textContent
+        current_elem.textContent = "Current: " + Math.abs(num*current).toFixed(0) + "uA";
+      } else {
+        console.log(num_coils_elem.textContent)
+      }
     }
   }
 }
