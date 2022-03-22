@@ -1,4 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,12 @@ import { AfterViewInit, Component } from '@angular/core';
 export class AppComponent implements AfterViewInit {
   title = 'lenz';
   num_coils = 13;
+  options: AnimationOptions = {
+    path: "../assets/MagenticFieldAnim.json"
+  }
+
+  constructor(){
+  }
 
   ngAfterViewInit(): void {
     var elem = document.getElementById("dragger");
@@ -64,7 +71,7 @@ export class AppComponent implements AfterViewInit {
       if ((current > -noise) && (current < noise)) {
         arrow1.style.setProperty('visibility', 'collapse');
         arrow2.style.setProperty('visibility', 'collapse');
-        current_elem.textContent = '0';
+        current_elem.textContent = "Current: " + '0 uA';
         return;
       }
       arrow1.style.setProperty('visibility', 'unset');
@@ -78,7 +85,7 @@ export class AppComponent implements AfterViewInit {
         arrow1.style.setProperty('transform', 'rotate(180deg)');
         arrow2.style.setProperty('transform', 'rotate(180deg)');
       }
-      current_elem.textContent = Math.abs(current).toFixed(0);
+      current_elem.textContent = "Current: " + Math.abs(current).toFixed(0) + "uA";
     }
   }
 }

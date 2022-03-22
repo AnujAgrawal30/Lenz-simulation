@@ -73,9 +73,9 @@
                 background-image: url("../assets/Magnet.svg");
                 background-size: contain;
                 background-repeat: no-repeat;
+                background-position: center center;
                 width: 18vw;
-                height: 5vw;
-                top: 9vw;
+                top: 6vw;
                 left: 10vw;
             }
             .bulb {
@@ -97,6 +97,12 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                .ammeter-reading {
+                    font-family: Chivo;
+                    font-size: 0.7vw;
+                    margin-top: 10vw;
+                }
             }
             .wire {
                 position: absolute;

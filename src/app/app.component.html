@@ -43,13 +43,17 @@
   </div>
   <div class="div-experiment" style="margin-bottom: 10%;">
     <div class="div-background">
-      <div class="magnet" id="dragger"></div>
+      <div class="magnet" id="dragger">
+      <ng-lottie class="lottieFile" height="auto" [options]="options"></ng-lottie>
+      </div>
       <div class="wire left"></div>
       <div class="wire right"></div>
       <div id="arrow1" class="arrow a-left"></div>
       <div id="arrow2" class="arrow a-right"></div>
       <div class="bulb"></div>
-      <div id="current" class="ammeter"></div>
+      <div class="ammeter">
+        <div class="ammeter-reading" id="current">Current: 0uA</div>
+      </div>
     </div>
     <div [style.width.vw]="num_coils" class="coil"></div>
   </div>
