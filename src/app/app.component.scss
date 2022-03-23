@@ -71,7 +71,7 @@
             .div-magnet {
                 position: absolute; 
                 width: 50vw;
-                top: -1.5vw;
+                top: -2vw;
                 left: 10vw;
 
                 .magnet {
@@ -154,4 +154,24 @@
             top: 3vw;
         }
     }
+
+    .div-example
+    {
+        width: 40vw;
+        padding-top: 4vw;
+        .heading2
+        {
+            font-family: Chivo;
+            font-size: 3vw;
+            font-weight: 900;
+            text-align: left;
+            padding-bottom: 1vw;
+        }
+        .real-world {
+            margin-bottom: 3vw;
+            font-family: Chivo;
+            font-size: 1vw;
+        }
+    }
+
 }
