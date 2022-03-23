@@ -23,12 +23,13 @@ export class AppComponent implements AfterViewInit {
     var current = document.getElementById('current');
     var num_coils_elem = document.getElementById('num_coils');
     var bulb = document.getElementById('bulb');
-    if ((elem) && (arrow1) && (arrow2) && (current) && (num_coils_elem) && (bulb)){
-      this.dragElement(elem, arrow1, arrow2, current, num_coils_elem, bulb);
+    var ammeter = document.getElementById('ammeter');
+    if ((elem) && (arrow1) && (arrow2) && (current) && (num_coils_elem) && (bulb) && (ammeter)){
+      this.dragElement(elem, arrow1, arrow2, current, num_coils_elem, bulb, ammeter);
     }
   }
 
-  dragElement(elmnt: HTMLElement, arrow1: HTMLElement, arrow2: HTMLElement, current_elem: HTMLElement, num_coils_elem: HTMLElement, bulb: HTMLElement) {
+  dragElement(elmnt: HTMLElement, arrow1: HTMLElement, arrow2: HTMLElement, current_elem: HTMLElement, num_coils_elem: HTMLElement, bulb: HTMLElement, ammeter: HTMLElement) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     var time = Date.now();
     var noise = 10, scale = 1000;
@@ -75,6 +76,7 @@ export class AppComponent implements AfterViewInit {
         arrow2.style.setProperty('visibility', 'collapse');
         bulb.style.setProperty('visibility', 'collapse');
         current_elem.textContent = "Current: " + '0 uA';
+        ammeter.style.backgroundImage = "url('../assets/Ammeter.svg')";
         return;
       }
       arrow1.style.setProperty('visibility', 'unset');
@@ -84,10 +86,13 @@ export class AppComponent implements AfterViewInit {
         // Left current
         arrow1.style.setProperty('transform', 'none');
         arrow2.style.setProperty('transform', 'none');
+        ammeter.style.backgroundImage = "url('../assets/AmmeterLeft.svg')";
       } else {
         // Right current
         arrow1.style.setProperty('transform', 'rotate(180deg)');
         arrow2.style.setProperty('transform', 'rotate(180deg)');
+        ammeter.style.backgroundImage = "url('../assets/AmmeterRight.svg')";
+        
       }
       if (num_coils_elem.textContent){
         var num: number = +num_coils_elem.textContent
