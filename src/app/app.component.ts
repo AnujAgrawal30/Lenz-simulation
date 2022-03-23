@@ -33,6 +33,7 @@ export class AppComponent implements AfterViewInit {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     var time = Date.now();
     var noise = 10, scale = 1000;
+    var current = 0;
     elmnt.onmousedown = dragMouseDown;
   
     function dragMouseDown(e: MouseEvent) {
@@ -49,8 +50,7 @@ export class AppComponent implements AfterViewInit {
     function elementDrag(e: MouseEvent) {
       e = e || window.event;
       e.preventDefault();
-      var dt = time - Date.now();
-      time = Date.now();
+      var dt = Date.now() - time;
       // calculate the new cursor position:
       pos1 = pos3 - e.clientX;
       // pos2 = pos4 - e.clientY;
@@ -59,7 +59,12 @@ export class AppComponent implements AfterViewInit {
       // set the element's new position:
       // elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
       elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-      var current = scale*pos1/dt;
+      if (dt > 100) {
+        current = scale*pos1/dt;
+        time = Date.now();
+      } else {
+        console.log(dt)
+      }
       setCurrent(current);
     }
   
@@ -95,7 +100,8 @@ export class AppComponent implements AfterViewInit {
         
       }
       if (num_coils_elem.textContent){
-        var num: number = +num_coils_elem.textContent
+        var num: number = +num_coils_elem.textContent;
+        // current_moving = (1000*current_moving + current) / 1001;
         current_elem.textContent = "Current: " + Math.abs(num*current).toFixed(0) + "uA";
       } else {
         console.log(num_coils_elem.textContent)
