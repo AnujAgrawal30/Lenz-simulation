@@ -32,6 +32,16 @@
         .short {
             width: 70%;
         }
+        .img-formula {
+            position: absolute;
+            background-image: url("../assets/Equationimage.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 11vw;
+            height: 7vw;
+            left: 60vw;
+            top: 22vw;
+        }
         .div-controller {
 
             .head {
@@ -89,6 +99,14 @@
             .bulb {
                 position: absolute;
                 background-image: url("../assets/Bulb.svg");
+                background-size: contain;
+                width: 7vw;
+                height: 7vw;
+                left: 10vw;
+            }
+            .bulb2 {
+                position: absolute;
+                background-image: url("../assets/BulbYellow.svg");
                 background-size: contain;
                 width: 7vw;
                 height: 7vw;

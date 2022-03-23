@@ -22,12 +22,13 @@ export class AppComponent implements AfterViewInit {
     var arrow2 = document.getElementById('arrow2');
     var current = document.getElementById('current');
     var num_coils_elem = document.getElementById('num_coils');
-    if ((elem) && (arrow1) && (arrow2) && (current) && (num_coils_elem)){
-      this.dragElement(elem, arrow1, arrow2, current, num_coils_elem);
+    var bulb = document.getElementById('bulb');
+    if ((elem) && (arrow1) && (arrow2) && (current) && (num_coils_elem) && (bulb)){
+      this.dragElement(elem, arrow1, arrow2, current, num_coils_elem, bulb);
     }
   }
 
-  dragElement(elmnt: HTMLElement, arrow1: HTMLElement, arrow2: HTMLElement, current_elem: HTMLElement, num_coils_elem: HTMLElement) {
+  dragElement(elmnt: HTMLElement, arrow1: HTMLElement, arrow2: HTMLElement, current_elem: HTMLElement, num_coils_elem: HTMLElement, bulb: HTMLElement) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     var time = Date.now();
     var noise = 10, scale = 1000;
@@ -72,11 +73,13 @@ export class AppComponent implements AfterViewInit {
       if ((current > -noise) && (current < noise)) {
         arrow1.style.setProperty('visibility', 'collapse');
         arrow2.style.setProperty('visibility', 'collapse');
+        bulb.style.setProperty('visibility', 'collapse');
         current_elem.textContent = "Current: " + '0 uA';
         return;
       }
       arrow1.style.setProperty('visibility', 'unset');
       arrow2.style.setProperty('visibility', 'unset');
+      bulb.style.setProperty('visibility', 'unset');
       if (current < 0) {
         // Left current
         arrow1.style.setProperty('transform', 'none');
