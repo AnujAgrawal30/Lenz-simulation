@@ -10,7 +10,7 @@ export class AppComponent implements AfterViewInit {
   title = 'lenz';
   num_coils = 13;
   options: AnimationOptions = {
-    path: "../assets/MagenticFieldAnim.json"
+    path: "./assets/MagenticFieldAnim.json"
   }
 
   constructor(){
@@ -62,8 +62,6 @@ export class AppComponent implements AfterViewInit {
       if (dt > 100) {
         current = scale*pos1/dt;
         time = Date.now();
-      } else {
-        console.log(dt)
       }
       setCurrent(current);
     }
@@ -103,8 +101,6 @@ export class AppComponent implements AfterViewInit {
         var num: number = +num_coils_elem.textContent;
         // current_moving = (1000*current_moving + current) / 1001;
         current_elem.textContent = "Current: " + Math.abs(num*current).toFixed(0) + "uA";
-      } else {
-        console.log(num_coils_elem.textContent)
       }
     }
   }
