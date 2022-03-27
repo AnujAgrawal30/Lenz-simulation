@@ -21,6 +21,12 @@
       </div>
       <div class="img-formula"></div>
     </div>
+    <div class="description short" style="width: 40vw;">
+      Thrusting a pole of a permanent bar magnet through a coil of wire, for example, induces an electric current in the coil; the current, in turn, sets up a magnetic field around the coil, making it a magnet. Lenz’s law indicates the direction of the induced current. (The direction of the induced current from Lenz’s law contributes to the minus sign in Faraday’s law of induction.) Because like magnetic poles repel each other, Lenz’s law states that when the north pole of the bar magnet is approaching the coil, the induced current flows in such a way as to make the side of the coil nearest the pole of the bar magnet itself a north pole to oppose the approaching bar magnet. Upon withdrawing the bar magnet from the coil, the induced current reverses itself, and the near side of the coil becomes a south pole to produce an attracting force on the receding bar magnet.
+    </div>
+    <div class="div-example" style="padding-top: 0;">
+      <div class="heading2"> Test it out!</div>
+    </div>
     <div class="div-controller">
       <div class="head">
         <div class="desc">
@@ -41,7 +47,7 @@
       </div>
     </div>
   </div>
-  <div class="div-experiment" style="margin-bottom: 10%;">
+  <div class="div-experiment" style="margin-bottom: 10%; margin-top: 5%;">
     <div class="div-background">
       <div class="div-magnet" id="dragger">
       <ng-lottie class="lottieFile" height="auto" [options]="options"></ng-lottie>
@@ -54,7 +60,7 @@
       <div class="bulb"></div>
       <div id="bulb" class="bulb2"></div>
       <div id="ammeter" class="ammeter">
-        <div class="ammeter-reading" id="current">Current: 0uA</div>
+        <div class="ammeter-reading" id="current"><div class="ammeter-reading-top">Current-</div> 0uA</div>
       </div>
     </div>
     <div [style.width.vw]="num_coils" class="coil"></div>
@@ -63,18 +69,18 @@
     <div class="heading2">
       References
     </div>
-    <!-- <div class="real-world">
-      Lenz's law is contained in the rigorous treatment of Faraday's law of induction (the magnitude of EMF induced in
-      a coil is proportional to the rate of change of the magnetic field), where it finds expression by the negative
-      sign:
-  </div> -->
+    <div class="real-world" style="margin-left: -40px;">
+      <ul>
+      <li>Britannica, T. Editors of Encyclopaedia (2020, May 29). Lenz’s law. Encyclopedia Britannica. <a href="https://www.britannica.com/science/Lenzs-law" target="blank"> https://www.britannica.com/science/Lenzs-law</a></li>
+      </ul>
+  </div>
   <div class="heading2">
     Contributions and Credits
   </div>
   <div class="real-world" style="margin-left: -40px;">
     <ul>
-    <li>This was done as an academic project for IDC, IIT Bombay, under the guidance of Prof. Venkatesh Rajamanickam.</li>
-    <li>Thanks to Anuj Agarwal, Mechanical Dual Degree, IIT Bombay for helping me figure out the technical aspects of the simulation. </li>
+    <li>This was done as an academic project for IDC, IIT Bombay, under the guidance of <b>Prof. Venkatesh Rajamanickam.</b> </li>
+    <li>Thanks to Anuj Agarwal, IIT Bombay for helping me figure out the technical aspects of the simulation. </li>
     </ul>
        
 </div>

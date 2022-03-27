@@ -129,8 +129,16 @@
 
                 .ammeter-reading {
                     font-family: Chivo;
-                    font-size: 0.7vw;
+                    font-size: 1.5vw;
+                    padding-top: 2vw;
                     margin-top: 10vw;
+                    text-align: left;
+                }
+                .ammeter-reading-top
+                {
+                    font-family: Chivo;
+                    font-size: 1.5vw;
+                    text-align: left;
                 }
             }
             .wire {
