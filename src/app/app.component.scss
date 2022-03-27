@@ -159,21 +159,21 @@
                 right: 0vw;
             }
             .arrow {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 position: absolute;
                 margin-top: 1vw;
-                background-image: url("../assets/arrow.svg");
-                background-size: contain;
-                background-repeat: no-repeat;
-                width: 3vw;
+                width: 50vw;
                 height: 3vw;
             }
             .a-left {
                 top: 1.35vw;
-                left: 30vw;
+                left: 5vw;
             }
             .a-right {
                 top: 16.3vw;
-                right: 30vw;
+                right: 5vw;
             }
         }
         .coil {

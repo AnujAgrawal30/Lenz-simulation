@@ -12,6 +12,12 @@ export class AppComponent implements AfterViewInit {
   options: AnimationOptions = {
     path: "./assets/MagenticFieldAnim.json"
   }
+  arrow_options1: AnimationOptions = {
+    path: "./assets/DirectionLeft.json"
+  }
+  arrow_options2: AnimationOptions = {
+    path: "./assets/DirectionRight.json"
+  }
 
   constructor(){
   }
@@ -35,6 +41,7 @@ export class AppComponent implements AfterViewInit {
     var noise = 10, scale = 1000;
     var current = 0;
     elmnt.onmousedown = dragMouseDown;
+    setCurrent(0);
   
     function dragMouseDown(e: MouseEvent) {
       e = e || window.event;

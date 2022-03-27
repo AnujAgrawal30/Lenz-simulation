@@ -39,7 +39,7 @@
           1
         </div>
         <div class="slider">
-          <input [(ngModel)]="num_coils" type="range" min="1" max="25" value="13">
+          <input class="input-slider" [(ngModel)]="num_coils" type="range" min="1" max="25" value="13">
         </div>
         <div class="slider-num right">
           25
@@ -49,18 +49,22 @@
   </div>
   <div class="div-experiment" style="margin-bottom: 10%; margin-top: 5%;">
     <div class="div-background">
-      <div class="div-magnet" id="dragger">
-      <ng-lottie class="lottieFile" height="auto" [options]="options"></ng-lottie>
-      <div class="magnet"></div>
-      </div>
       <div class="wire left"></div>
       <div class="wire right"></div>
-      <div id="arrow1" class="arrow a-left"></div>
-      <div id="arrow2" class="arrow a-right"></div>
+      <div id="arrow1" class="arrow a-left">
+        <ng-lottie id="left-arrow" height="auto" [options]="arrow_options1"></ng-lottie>
+      </div>
+      <div id="arrow2" class="arrow a-right">
+        <ng-lottie id="left-arrow" height="auto" [options]="arrow_options1"></ng-lottie>
+      </div>
       <div class="bulb"></div>
       <div id="bulb" class="bulb2"></div>
       <div id="ammeter" class="ammeter">
         <div class="ammeter-reading" id="current"><div class="ammeter-reading-top">Current-</div> 0uA</div>
+      </div>
+      <div class="div-magnet" id="dragger">
+        <ng-lottie class="lottieFile" height="auto" [options]="options"></ng-lottie>
+      <div class="magnet"></div>
       </div>
     </div>
     <div [style.width.vw]="num_coils" class="coil"></div>
